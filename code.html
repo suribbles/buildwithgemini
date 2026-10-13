@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#131313;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface": "#e5e2e1", "secondary-fixed": "#ffdbcf", "secondary-container": "#f95e14", "primary-fixed-dim": "#f5bf2d", "inverse-surface": "#e5e2e1", "on-secondary-fixed-variant": "#802a00", "tertiary-fixed-dim": "#3de273", "on-primary": "#3f2e00", "secondary-fixed-dim": "#ffb59a", "inverse-primary": "#785a00", "surface-container-high": "#2a2a2a", "surface-bright": "#393939", "error-container": "#93000a", "on-surface-variant": "#d2c5ad", "on-tertiary-fixed": "#002109", "surface-container": "#201f1f", "on-secondary-fixed": "#380d00", "outline-variant": "#4f4634", "on-tertiary": "#003915", "error": "#ffb4ab", "primary-container": "#ffc837", "tertiary-fixed": "#66ff8e", "surface-container-lowest": "#0e0e0e", "on-primary-container": "#705400", "surface-variant": "#353534", "surface-tint": "#f5bf2d", "primary": "#ffeac1", "on-primary-fixed": "#251a00", "on-error": "#690005", "on-primary-fixed-variant": "#5a4300", "tertiary-container": "#4aec7b", "surface": "#131313", "on-secondary": "#5b1b00", "primary-fixed": "#ffdf9a", "tertiary": "#adffb7", "surface-container-highest": "#353534", "surface-dim": "#131313", "outline": "#9b8f7a", "inverse-on-surface": "#313030", "on-error-container": "#ffdad6", "secondary": "#ffb59a", "on-background": "#e5e2e1", "on-secondary-container": "#4f1700", "surface-container-low": "#1c1b1b", "on-tertiary-fixed-variant": "#005322", "background": "#131313", "on-tertiary-container": "#00672c" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter-mobile": "0.75rem", "gutter": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-md": "1rem", "space-xl": "2.5rem", "margin-mobile": "1rem", "margin": "2rem" }, "fontFamily": { "headline-lg-mobile": ["Oswald"], "body-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Oswald"], "label-md": ["Space Grotesk"], "headline-xl": ["Oswald"], "headline-md": ["Oswald"], "headline-lg": ["Oswald"], "label-lg": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-xl-mobile": ["38px", { "lineHeight": "42px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }], "headline-xl": ["56px", { "lineHeight": "60px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.05em", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.1em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,0,0,0.5)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><div class="w-11 h-11 bg-primary-container flex items-center justify-center shrink-0 -rotate-2 shadow-[2px_2px_0px_#000000]"><span class="material-symbols-outlined text-on-primary-container text-[24px]">soup_kitchen</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><h1 class="font-headline-md text-headline-md tracking-tight uppercase text-on-surface truncate leading-none">Live Battle Room</h1><span class="bg-secondary-container text-on-secondary px-1.5 py-0.5 font-label-sm text-label-sm uppercase tracking-wider -rotate-1 shrink-0">LIVE DUM</span></div><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">HYD BATTLE GROUND</span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="bg-surface-container-high px-2 py-1 flex items-center gap-1"><span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">tag</span><span class="font-label-sm text-label-sm text-primary tracking-widest font-bold">#DUM-404</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 bg-surface"><div class="flex flex-col w-full px-gutter-mobile pb-28 gap-space-md select-none">
+<!-- Interactive Gully Dispatch Banner -->
+<div class="relative w-full bg-surface-container-low shadow-[4px_4px_0px_#000000] p-space-sm overflow-hidden">
+<!-- Hazard Stripes Top Rim -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-[repeating-linear-gradient(45deg,#f95e14,#f95e14_10px,#000000_10px,#000000_20px)]"></div>
+<div class="flex items-center justify-between mt-1">
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-2.5 h-2.5 bg-secondary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-container">WAR ROOM TRANSMISSION</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-highest px-2 py-0.5">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed-dim">timer</span>
+<span class="font-label-md text-label-md text-primary tracking-widest" id="deg-timer">03:42</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">LEFT</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 gap-2">
+<div class="flex items-center gap-2">
+<!-- Live Avatar Stack with DUM badges -->
+<div class="flex -space-x-2 shrink-0">
+<div class="w-7 h-7 bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#000000]">MI</div>
+<div class="w-7 h-7 bg-secondary-container text-on-secondary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#000000]">AZ</div>
+<div class="w-7 h-7 bg-tertiary-container text-on-tertiary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#000000]">SZ</div>
+<div class="w-7 h-7 bg-surface-container-high text-primary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#000000]">+2</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface uppercase font-bold tracking-tight">5 PARESHAAN BHAI LOG</span>
+<span class="font-label-sm text-label-sm text-secondary-container tracking-wider">VOTING ROUND #04</span>
+</div>
+</div>
+<div class="bg-primary text-on-primary px-2 py-0.5 font-label-sm text-label-sm uppercase font-bold -rotate-2 shadow-[2px_2px_0px_#000000]">
+        LIVE TIE-BREAKER
+      </div>
+</div>
+</div>
+<!-- Editorial Explainer Dossier Strip (VOX aesthetic header) -->
+<div class="bg-surface-container p-space-md shadow-[4px_4px_0px_#000000] relative">
+<!-- Star Anise & Spice Doodle SVG -->
+<svg class="absolute right-3 top-3 w-10 h-10 text-primary-fixed-dim/20 pointer-events-none" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 2L13.5 8L19.5 6.5L16 11.5L21.5 14L16 16.5L18 22.5L12.5 19L9.5 24.5L8.5 18.5L2.5 19.5L6.5 14.5L1 11.5L7 9.5L5.5 3.5L11 7.5L12 2Z"></path>
+</svg>
+<div class="flex items-center gap-2 mb-1.5">
+<span class="bg-primary-container text-on-primary-container px-2 py-0.5 font-label-sm text-label-sm uppercase font-bold -rotate-1">VOX HYD DISPATCH</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">FORENSIC AUDIT</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile uppercase text-on-surface leading-tight tracking-tight">
+      THE ETERNAL DEBATE: <span class="text-primary-container bg-surface-container-lowest px-1">KAUNSI DEG SAHI HAI?</span>
+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 leading-snug">
+      No sponsored hype. Pure Hyderabadi consensus: Grain moisture, Elaichi quotient, and Salan potency locked down live.
+    </p>
+<!-- Distance Filter Tape Deck -->
+<div class="mt-3 pt-3 flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">RADIUS FROM CHARMINAR / GACHIBOWLI</span>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold" id="active-filter-label">ALL RADIUS</span>
+</div>
+<div class="flex gap-1.5 overflow-x-auto pb-1" id="filter-container">
+<button class="filter-btn active-filter bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase px-3 py-1.5 font-bold shadow-[2px_2px_0px_#000000] shrink-0 transition-transform" data-filter="all">
+          ALL (ANY)
+        </button>
+<button class="filter-btn bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase px-3 py-1.5 font-bold shadow-[2px_2px_0px_#000000] shrink-0 transition-transform" data-filter="5">
+          &lt; 5 KM (GULLY)
+        </button>
+<button class="filter-btn bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase px-3 py-1.5 font-bold shadow-[2px_2px_0px_#000000] shrink-0 transition-transform" data-filter="10">
+          &lt; 10 KM (CROSS-TOWN)
+        </button>
+<button class="filter-btn bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase px-3 py-1.5 font-bold shadow-[2px_2px_0px_#000000] shrink-0 transition-transform" data-filter="15">
+          &lt; 15 KM (GHATKOPAR GANG)
+        </button>
+</div>
+</div>
+</div>
+<!-- Live Dynamic Ticker Toast Bar -->
+<div class="hidden bg-secondary-container text-on-secondary px-space-sm py-2 shadow-[4px_4px_0px_#000000] items-center justify-between transition-all" id="live-voted-toast">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] animate-bounce">check_circle</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider" id="live-voted-text">Vote locked! Zabardast choice miyan!</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-lowest text-primary px-1.5 py-0.5 uppercase">+1 DUM</span>
+</div>
+<!-- Battle Cards Stream -->
+<div class="flex flex-col gap-space-md" id="cards-container">
+<!-- Card 1: Cafe Bahar -->
+<div class="battle-card relative bg-surface-container p-space-md shadow-[4px_4px_0px_#000000] transition-all" data-distance="3.2" data-id="bahar" data-votes="5">
+<!-- Tape Tag Sticker -->
+<div class="absolute -top-2.5 right-4 bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold px-2.5 py-0.5 -rotate-2 shadow-[2px_2px_0px_#000000] z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">military_tech</span>
+<span>ICONIC MASALA RATIO</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-highest font-label-sm text-label-sm text-primary px-1.5 py-0.2">#01</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-tight">CAFE BAHAR</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">BASHEERBAGH • 3.2 KM AWAY</span>
+</div>
+<div class="flex flex-col items-end">
+<div class="bg-surface-container-high px-2 py-0.5 flex items-center gap-1 shadow-[2px_2px_0px_#000000]">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">star</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.6</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(12.4k)</span>
+</div>
+</div>
+</div>
+<!-- Specs Dossier Grid -->
+<div class="grid grid-cols-3 gap-2 mt-3 bg-surface-container-lowest p-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SPICE DUM</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-bold tracking-tight">🌶️🌶️🌶️🌶️ (HEAVY)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">PRICE / PLATE</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">₹320 / ₹580 SPL</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">RICE GRAIN</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">DOUBLE MASALA</span>
+</div>
+</div>
+<!-- Live Vote Progress & Action -->
+<div class="mt-3 pt-2 flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">how_to_vote</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase"><span class="vote-count-text text-primary-fixed-dim">5</span> VOTES IN ROOM</span>
+</div>
+<span class="vote-percent-badge font-label-sm text-label-sm text-secondary-container font-bold uppercase">29% CONSENSUS</span>
+</div>
+<!-- Neubrutalist Segmented Progress Bar -->
+<div class="w-full h-3 bg-surface-container-lowest shadow-[inset_1px_1px_2px_#000000] overflow-hidden flex">
+<div class="progress-bar-fill h-full bg-primary-container transition-all duration-300" style="width: 29%;"></div>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<button class="vote-btn flex-1 bg-primary-container text-on-primary-container font-label-md text-label-md uppercase font-bold py-2 px-3 shadow-[4px_4px_0px_#000000] active:translate-x-1 active:translate-y-1 active:shadow-none flex items-center justify-center gap-1 transition-transform" onclick="castVote('bahar', 'Cafe Bahar')">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<span>BACK THIS DEG (+1)</span>
+</button>
+<button class="bg-surface-container-high text-on-surface px-3 py-2 font-label-sm text-label-sm uppercase font-bold shadow-[2px_2px_0px_#000000] active:translate-y-0.5" onclick="triggerBaiganToast('Bahar salan is top notch miyan, don\'t argue!')">
+            DOSSIER
+          </button>
+</div>
+</div>
+</div>
+<!-- Card 2: Bawarchi -->
+<div class="battle-card relative bg-surface-container p-space-md shadow-[4px_4px_0px_#000000] transition-all" data-distance="5.8" data-id="bawarchi" data-votes="4">
+<div class="absolute -top-2.5 right-4 bg-secondary-container text-on-secondary font-label-sm text-label-sm font-bold px-2.5 py-0.5 rotate-1 shadow-[2px_2px_0px_#000000] z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">local_fire_department</span>
+<span>ORIGINAL X ROADS DEG</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-highest font-label-sm text-label-sm text-primary px-1.5 py-0.2">#02</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-tight">BAWARCHI</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">RTC X ROADS • 5.8 KM AWAY</span>
+</div>
+<div class="flex flex-col items-end">
+<div class="bg-surface-container-high px-2 py-0.5 flex items-center gap-1 shadow-[2px_2px_0px_#000000]">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">star</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.5</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(28.1k)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-3 bg-surface-container-lowest p-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SPICE DUM</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-bold tracking-tight">🌶️🌶️🌶️🌶️🌶️ (TEEKHA)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">PRICE / PLATE</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">₹310 (FULL DEG)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">RICE GRAIN</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">EXTRA MIRCHI SALAN</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">how_to_vote</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase"><span class="vote-count-text text-primary-fixed-dim">4</span> VOTES IN ROOM</span>
+</div>
+<span class="vote-percent-badge font-label-sm text-label-sm text-secondary-container font-bold uppercase">24% CONSENSUS</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest shadow-[inset_1px_1px_2px_#000000] overflow-hidden flex">
+<div class="progress-bar-fill h-full bg-secondary-container transition-all duration-300" style="width: 24%;"></div>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<button class="vote-btn flex-1 bg-primary-container text-on-primary-container font-label-md text-label-md uppercase font-bold py-2 px-3 shadow-[4px_4px_0px_#000000] active:translate-x-1 active:translate-y-1 active:shadow-none flex items-center justify-center gap-1 transition-transform" onclick="castVote('bawarchi', 'Bawarchi RTC X Roads')">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<span>BACK THIS DEG (+1)</span>
+</button>
+<button class="bg-surface-container-high text-on-surface px-3 py-2 font-label-sm text-label-sm uppercase font-bold shadow-[2px_2px_0px_#000000] active:translate-y-0.5" onclick="triggerBaiganToast('Beware duplicate Bawarchis miyan, only real one at RTC X Roads!')">
+            DOSSIER
+          </button>
+</div>
+</div>
+</div>
+<!-- Card 3: Hotel Shadab -->
+<div class="battle-card relative bg-surface-container p-space-md shadow-[4px_4px_0px_#000000] transition-all" data-distance="9.4" data-id="shadab" data-votes="3">
+<div class="absolute -top-2.5 right-4 bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold px-2.5 py-0.5 -rotate-1 shadow-[2px_2px_0px_#000000] z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">crown</span>
+<span>OLD CITY ROYALTY</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-highest font-label-sm text-label-sm text-primary px-1.5 py-0.2">#03</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-tight">HOTEL SHADAB</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">MADINA CIRCLE • 9.4 KM AWAY</span>
+</div>
+<div class="flex flex-col items-end">
+<div class="bg-surface-container-high px-2 py-0.5 flex items-center gap-1 shadow-[2px_2px_0px_#000000]">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">star</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.7</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(19.8k)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-3 bg-surface-container-lowest p-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SPICE DUM</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim font-bold tracking-tight">🌶️🌶️🌶️ (BALANCED)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">PRICE / PLATE</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">₹340 (MUTTON DUM)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">MEAT TENDERNESS</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">MELT-IN-MOUTH</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">how_to_vote</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase"><span class="vote-count-text text-primary-fixed-dim">3</span> VOTES IN ROOM</span>
+</div>
+<span class="vote-percent-badge font-label-sm text-label-sm text-secondary-container font-bold uppercase">18% CONSENSUS</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest shadow-[inset_1px_1px_2px_#000000] overflow-hidden flex">
+<div class="progress-bar-fill h-full bg-primary-fixed-dim transition-all duration-300" style="width: 18%;"></div>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<button class="vote-btn flex-1 bg-primary-container text-on-primary-container font-label-md text-label-md uppercase font-bold py-2 px-3 shadow-[4px_4px_0px_#000000] active:translate-x-1 active:translate-y-1 active:shadow-none flex items-center justify-center gap-1 transition-transform" onclick="castVote('shadab', 'Hotel Shadab')">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<span>BACK THIS DEG (+1)</span>
+</button>
+<button class="bg-surface-container-high text-on-surface px-3 py-2 font-label-sm text-label-sm uppercase font-bold shadow-[2px_2px_0px_#000000] active:translate-y-0.5" onclick="triggerBaiganToast('Shadab mutton is certified by Charminar elders!')">
+            DOSSIER
+          </button>
+</div>
+</div>
+</div>
+<!-- Card 4: Pista House -->
+<div class="battle-card relative bg-surface-container p-space-md shadow-[4px_4px_0px_#000000] transition-all" data-distance="2.1" data-id="pista" data-votes="2">
+<div class="absolute -top-2.5 right-4 bg-primary text-on-primary font-label-sm text-label-sm font-bold px-2.5 py-0.5 rotate-2 shadow-[2px_2px_0px_#000000] z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">bakery_dining</span>
+<span>ZAFFRANI RICE &amp; ZAIKA</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-highest font-label-sm text-label-sm text-primary px-1.5 py-0.2">#04</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-tight">PISTA HOUSE</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">CHARMINAR / KONDAPUR • 2.1 KM AWAY</span>
+</div>
+<div class="flex flex-col items-end">
+<div class="bg-surface-container-high px-2 py-0.5 flex items-center gap-1 shadow-[2px_2px_0px_#000000]">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">star</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(16.2k)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-3 bg-surface-container-lowest p-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SPICE DUM</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim font-bold tracking-tight">🌶️🌶️🌶️ (AROMATIC)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">PRICE / PLATE</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">₹330 (REGULAR)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SIGNATURE</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">ZAFFRANI DUM</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">how_to_vote</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase"><span class="vote-count-text text-primary-fixed-dim">2</span> VOTES IN ROOM</span>
+</div>
+<span class="vote-percent-badge font-label-sm text-label-sm text-secondary-container font-bold uppercase">12% CONSENSUS</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest shadow-[inset_1px_1px_2px_#000000] overflow-hidden flex">
+<div class="progress-bar-fill h-full bg-secondary-fixed-dim transition-all duration-300" style="width: 12%;"></div>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<button class="vote-btn flex-1 bg-primary-container text-on-primary-container font-label-md text-label-md uppercase font-bold py-2 px-3 shadow-[4px_4px_0px_#000000] active:translate-x-1 active:translate-y-1 active:shadow-none flex items-center justify-center gap-1 transition-transform" onclick="castVote('pista', 'Pista House')">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<span>BACK THIS DEG (+1)</span>
+</button>
+<button class="bg-surface-container-high text-on-surface px-3 py-2 font-label-sm text-label-sm uppercase font-bold shadow-[2px_2px_0px_#000000] active:translate-y-0.5" onclick="triggerBaiganToast('Pista House Haleem is king, but their Biryani dum is no joke!')">
+            DOSSIER
+          </button>
+</div>
+</div>
+</div>
+<!-- Card 5: Grand Hotel -->
+<div class="battle-card relative bg-surface-container p-space-md shadow-[4px_4px_0px_#000000] transition-all" data-distance="4.5" data-id="grand" data-votes="2">
+<div class="absolute -top-2.5 right-4 bg-surface-bright text-on-surface font-label-sm text-label-sm font-bold px-2.5 py-0.5 -rotate-2 shadow-[2px_2px_0px_#000000] z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">bedtime</span>
+<span>LATE NIGHT CLASSIC (ABIDS)</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-highest font-label-sm text-label-sm text-primary px-1.5 py-0.2">#05</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-tight">GRAND HOTEL</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">ABIDS MAIN ROAD • 4.5 KM AWAY</span>
+</div>
+<div class="flex flex-col items-end">
+<div class="bg-surface-container-high px-2 py-0.5 flex items-center gap-1 shadow-[2px_2px_0px_#000000]">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">star</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.3</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(8.9k)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-3 bg-surface-container-lowest p-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SPICE DUM</span>
+<span class="font-label-sm text-label-sm text-primary-fixed-dim font-bold tracking-tight">🌶️🌶️🌶️ (VINTAGE)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">PRICE / PLATE</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">₹290 (BUDGET KING)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">VIBE CHECK</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">POST-1 AM CHAI COMPATIBLE</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">how_to_vote</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase"><span class="vote-count-text text-primary-fixed-dim">2</span> VOTES IN ROOM</span>
+</div>
+<span class="vote-percent-badge font-label-sm text-label-sm text-secondary-container font-bold uppercase">12% CONSENSUS</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest shadow-[inset_1px_1px_2px_#000000] overflow-hidden flex">
+<div class="progress-bar-fill h-full bg-outline transition-all duration-300" style="width: 12%;"></div>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<button class="vote-btn flex-1 bg-primary-container text-on-primary-container font-label-md text-label-md uppercase font-bold py-2 px-3 shadow-[4px_4px_0px_#000000] active:translate-x-1 active:translate-y-1 active:shadow-none flex items-center justify-center gap-1 transition-transform" onclick="castVote('grand', 'Grand Hotel Abids')">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<span>BACK THIS DEG (+1)</span>
+</button>
+<button class="bg-surface-container-high text-on-surface px-3 py-2 font-label-sm text-label-sm uppercase font-bold shadow-[2px_2px_0px_#000000] active:translate-y-0.5" onclick="triggerBaiganToast('Abids late night scene has zero replacement!')">
+            DOSSIER
+          </button>
+</div>
+</div>
+</div>
+<!-- Card 6: Paradise Flagship -->
+<div class="battle-card relative bg-surface-container p-space-md shadow-[4px_4px_0px_#000000] transition-all" data-distance="7.6" data-id="paradise" data-votes="1">
+<div class="absolute -top-2.5 right-4 bg-outline-variant text-primary font-label-sm text-label-sm font-bold px-2.5 py-0.5 rotate-1 shadow-[2px_2px_0px_#000000] z-10 flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">history_edu</span>
+<span>THE HISTORIC BRAND</span>
+</div>
+<div class="flex justify-between items-start">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-highest font-label-sm text-label-sm text-primary px-1.5 py-0.2">#06</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-tight">PARADISE (SEC'BAD)</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SECUNDERABAD FLAGSHIP • 7.6 KM AWAY</span>
+</div>
+<div class="flex flex-col items-end">
+<div class="bg-surface-container-high px-2 py-0.5 flex items-center gap-1 shadow-[2px_2px_0px_#000000]">
+<span class="material-symbols-outlined text-primary-fixed-dim text-[16px]">star</span>
+<span class="font-label-md text-label-md text-on-surface font-bold">4.1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">(34.0k)</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-3 bg-surface-container-lowest p-2">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">SPICE DUM</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold tracking-tight">🌶️🌶️ (TOURIST MILD)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">PRICE / PLATE</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">₹360 (SPECIAL)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">LOCAL SQUAD OPINION</span>
+<span class="font-label-sm text-label-sm text-secondary-container font-bold">"ONLY FOR AIRPORT FOLKS"</span>
+</div>
+</div>
+<div class="mt-3 pt-2 flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary-container">how_to_vote</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase"><span class="vote-count-text text-primary-fixed-dim">1</span> VOTE IN ROOM</span>
+</div>
+<span class="vote-percent-badge font-label-sm text-label-sm text-secondary-container font-bold uppercase">5% CONSENSUS</span>
+</div>
+<div class="w-full h-3 bg-surface-container-lowest shadow-[inset_1px_1px_2px_#000000] overflow-hidden flex">
+<div class="progress-bar-fill h-full bg-outline-variant transition-all duration-300" style="width: 5%;"></div>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<button class="vote-btn flex-1 bg-primary-container text-on-primary-container font-label-md text-label-md uppercase font-bold py-2 px-3 shadow-[4px_4px_0px_#000000] active:translate-x-1 active:translate-y-1 active:shadow-none flex items-center justify-center gap-1 transition-transform" onclick="castVote('paradise', 'Paradise Secunderabad')">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<span>BACK THIS DEG (+1)</span>
+</button>
+<button class="bg-surface-container-high text-on-surface px-3 py-2 font-label-sm text-label-sm uppercase font-bold shadow-[2px_2px_0px_#000000] active:translate-y-0.5" onclick="triggerBaiganToast('Pure tourist bias! Local junta will mock this choice, ustaad.')">
+            DOSSIER
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- THE DEG VERDICT: Live Champion Display Banner -->
+<div class="bg-surface-container-low p-space-md shadow-[6px_6px_0px_#f5bf2d] relative overflow-hidden">
+<!-- Chicken Leg Piece & Steaming Pot Doodle Background -->
+<svg class="absolute -right-4 -bottom-4 w-28 h-28 text-primary-container/10 pointer-events-none" fill="currentColor" viewbox="0 0 100 100">
+<path d="M70,20 C60,10 40,15 35,25 C30,35 32,50 40,60 C42,62 44,75 42,85 C42,88 47,88 47,85 C48,77 52,65 57,62 C70,55 78,35 70,20 Z"></path>
+<circle cx="44" cy="88" r="4"></circle>
+<circle cx="50" cy="88" r="4"></circle>
+</svg>
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-secondary-container text-on-secondary px-2 py-0.5 font-label-sm text-label-sm uppercase font-bold tracking-wider -rotate-1">
+        LIVE ROOM CONSENSUS WINNER
+      </span>
+<span class="text-tertiary-container font-label-sm text-label-sm uppercase font-bold animate-pulse">● SEALED IN DEG</span>
+</div>
+<div class="flex justify-between items-end">
+<div class="flex flex-col">
+<h4 class="font-headline-lg-mobile text-headline-lg-mobile text-primary-container uppercase leading-none tracking-tight" id="verdict-name">
+          CAFE BAHAR (BASHEERBAGH)
+        </h4>
+<p class="font-body-sm text-body-sm text-on-surface mt-1">
+          Leading by <span class="text-secondary-container font-bold" id="verdict-lead-count">1 vote</span> over Bawarchi. 4 spice rating with Double Masala unlocked.
+        </p>
+</div>
+</div>
+<div class="mt-4 pt-3 flex flex-col gap-2">
+<button class="w-full bg-primary-container text-on-primary-container font-headline-md text-headline-md uppercase py-3 shadow-[4px_4px_0px_#000000] active:translate-x-1 active:translate-y-1 active:shadow-none flex items-center justify-center gap-2 transition-transform" onclick="lockTableCTA()">
+<span class="material-symbols-outlined text-[24px]">navigation</span>
+<span>LOCK TABLE &amp; FIRE MAPS</span>
+</button>
+<div class="flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm px-1">
+<span>EST. ARRIVAL: 18 MINS IN AUTO</span>
+<span class="text-tertiary">TABLE SECURED: NO LINE TODAY</span>
+</div>
+</div>
+</div>
+<!-- SURI MANEKAR GULLY WARNING ENGINE (Simulation & Banter Playground) -->
+<div class="bg-surface-container p-space-md shadow-[4px_4px_0px_#000000] flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary-container text-[20px]">warning</span>
+<span class="font-label-md text-label-md uppercase text-on-surface font-bold tracking-wide">GULLY WARNING TEST RIG</span>
+</div>
+<span class="bg-surface-container-highest font-label-sm text-label-sm text-primary-fixed-dim px-2 py-0.5">SURI MANEKAR PROTOCOL</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-tight">
+      Tap any Hyderabadi error state below to test how our battle engine handles real street-level disruptions:
+    </p>
+<!-- Interactive Warning Trigger Pills -->
+<div class="grid grid-cols-2 gap-2 mt-1">
+<button class="bg-surface-container-high text-on-surface p-2 text-left shadow-[2px_2px_0px_#000000] active:translate-y-0.5 flex flex-col" onclick="showGullyToast('timeout')">
+<span class="font-label-sm text-label-sm text-secondary-container font-bold uppercase">🚨 SIGNAL TIMEOUT</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Mehdipatnam flyover jam</span>
+</button>
+<button class="bg-surface-container-high text-on-surface p-2 text-left shadow-[2px_2px_0px_#000000] active:translate-y-0.5 flex flex-col" onclick="showGullyToast('404')">
+<span class="font-label-sm text-label-sm text-primary-fixed-dim font-bold uppercase">🧭 404 GULLY LOST</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Seedha kidhar jaana?</span>
+</button>
+<button class="bg-surface-container-high text-on-surface p-2 text-left shadow-[2px_2px_0px_#000000] active:translate-y-0.5 flex flex-col" onclick="showGullyToast('spam')">
+<span class="font-label-sm text-label-sm text-error font-bold uppercase">🛑 TOO MANY VOTES</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Zyada nakko bolo bhai</span>
+</button>
+<button class="bg-surface-container-high text-on-surface p-2 text-left shadow-[2px_2px_0px_#000000] active:translate-y-0.5 flex flex-col" onclick="showGullyToast('baigan')">
+<span class="font-label-sm text-label-sm text-tertiary font-bold uppercase">🍆 BAIGAN RATING</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Veg biryani kaiku dekhre?</span>
+</button>
+<button class="col-span-2 bg-surface-container-high text-on-surface p-2 text-left shadow-[2px_2px_0px_#000000] active:translate-y-0.5 flex items-center justify-between" onclick="showGullyToast('noparking')">
+<div>
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold uppercase">🛵 NO PARKING / CACHE FULL</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Gaadi ghusaane ki jagah nahi hai miyan</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-primary">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- FLOATING MODAL / TOAST FOR GULLY WARNING (Authentic 3-beat structure) -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-sm hidden items-center justify-center p-4" id="gully-modal">
+<div class="bg-surface-container-high w-full max-w-sm shadow-[8px_8px_0px_#f95e14] overflow-hidden relative">
+<!-- Diagonal Hazard Ribbon Header -->
+<div class="h-3 bg-[repeating-linear-gradient(45deg,#f95e14,#f95e14_10px,#000000_10px,#000000_20px)]"></div>
+<div class="p-space-md flex flex-col gap-2.5">
+<!-- Beat 1: Hook Reaction Tape Badge -->
+<div class="flex items-center justify-between">
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm font-bold uppercase px-2 py-0.5 -rotate-1 shadow-[2px_2px_0px_#000000]" id="gully-badge">
+            USTAAD RUKO ZARA!
+          </span>
+<button class="text-on-surface-variant active:text-on-surface" onclick="closeGullyToast()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Beat 2: What went wrong (Hyderabadi tone) -->
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-tight leading-none mt-1" id="gully-title">
+          SIGNAL TIMEOUT DISPATCH!
+        </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-snug bg-surface-container-lowest p-2.5 shadow-[inset_1px_1px_0px_#000000]" id="gully-desc">
+          Arre, server Mehdipatnam flyover pe atak gaya! Traffic clear hone tak thoda sabar karo miyan.
+        </p>
+<!-- Beat 3: The Fix Button -->
+<div class="flex gap-2 mt-2">
+<button class="flex-1 bg-secondary-container text-on-secondary font-label-md text-label-md uppercase font-bold py-2.5 shadow-[3px_3px_0px_#000000] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-transform" id="gully-action-btn" onclick="closeGullyToast()">
+            HAU THIK HAI, PHIR SE KARO
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Dynamic Live Timer
+  (function initTimer() {
+    let secondsLeft = 222; // 03:42
+    const timerEl = document.getElementById('deg-timer');
+    setInterval(() => {
+      if (secondsLeft > 0) {
+        secondsLeft--;
+        const mins = Math.floor(secondsLeft / 60);
+        const secs = secondsLeft % 60;
+        timerEl.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      }
+    }, 1000);
+  })();
+
+  // Voting and Consensus Engine
+  const battleState = {
+    bahar: { name: 'Cafe Bahar (Basheerbagh)', votes: 5, color: 'bg-primary-container' },
+    bawarchi: { name: 'Bawarchi (RTC X Roads)', votes: 4, color: 'bg-secondary-container' },
+    shadab: { name: 'Hotel Shadab (Old City)', votes: 3, color: 'bg-primary-fixed-dim' },
+    pista: { name: 'Pista House (Kondapur)', votes: 2, color: 'bg-secondary-fixed-dim' },
+    grand: { name: 'Grand Hotel (Abids)', votes: 2, color: 'bg-outline' },
+    paradise: { name: 'Paradise (Secunderabad)', votes: 1, color: 'bg-outline-variant' }
+  };
+
+  function recalculateAll() {
+    let totalVotes = 0;
+    for (const key in battleState) {
+      totalVotes += battleState[key].votes;
+    }
+
+    let topRestaurantKey = 'bahar';
+    let maxVotes = -1;
+
+    for (const key in battleState) {
+      const data = battleState[key];
+      if (data.votes > maxVotes) {
+        maxVotes = data.votes;
+        topRestaurantKey = key;
+      }
+
+      const card = document.querySelector(`.battle-card[data-id="${key}"]`);
+      if (card) {
+        card.setAttribute('data-votes', data.votes);
+        const pct = Math.round((data.votes / totalVotes) * 100);
+        
+        const countEl = card.querySelector('.vote-count-text');
+        if (countEl) countEl.textContent = data.votes;
+
+        const badgeEl = card.querySelector('.vote-percent-badge');
+        if (badgeEl) badgeEl.textContent = `${pct}% CONSENSUS`;
+
+        const barFill = card.querySelector('.progress-bar-fill');
+        if (barFill) barFill.style.width = `${pct}%`;
+      }
+    }
+
+    // Update Verdict Card
+    const topData = battleState[topRestaurantKey];
+    const verdictName = document.getElementById('verdict-name');
+    const verdictLead = document.getElementById('verdict-lead-count');
+    if (verdictName) verdictName.textContent = topData.name.toUpperCase();
+    if (verdictLead) verdictLead.textContent = `${topData.votes} votes`;
+  }
+
+  function castVote(id, name) {
+    if (battleState[id]) {
+      battleState[id].votes += 1;
+      recalculateAll();
+
+      // Show dynamic live ticker toast
+      const toast = document.getElementById('live-voted-toast');
+      const text = document.getElementById('live-voted-text');
+      if (toast && text) {
+        text.textContent = `You voted for ${name}! Arre wah ustaad!`;
+        toast.classList.remove('hidden');
+        toast.classList.add('flex');
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          toast.classList.remove('flex');
+        }, 3200);
+      }
+    }
+  }
+
+  // Real-Time Distance Filtering
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.battle-card');
+  const activeLabel = document.getElementById('active-filter-label');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => {
+        b.classList.remove('bg-primary-container', 'text-on-primary-container');
+        b.classList.add('bg-surface-container-high', 'text-on-surface');
+      });
+      btn.classList.remove('bg-surface-container-high', 'text-on-surface');
+      btn.classList.add('bg-primary-container', 'text-on-primary-container');
+
+      const filterVal = btn.getAttribute('data-filter');
+      activeLabel.textContent = filterVal === 'all' ? 'ALL RADIUS' : `< ${filterVal} KM ONLY`;
+
+      cards.forEach(card => {
+        const dist = parseFloat(card.getAttribute('data-distance') || '0');
+        if (filterVal === 'all') {
+          card.style.display = 'block';
+        } else {
+          const limit = parseFloat(filterVal);
+          card.style.display = (dist <= limit) ? 'block' : 'none';
+        }
+      });
+    });
+  });
+
+  // Gully Warning Toast & Banter Engine
+  const gullyModal = document.getElementById('gully-modal');
+  const gullyBadge = document.getElementById('gully-badge');
+  const gullyTitle = document.getElementById('gully-title');
+  const gullyDesc = document.getElementById('gully-desc');
+  const gullyActionBtn = document.getElementById('gully-action-btn');
+
+  const gullyScenarios = {
+    timeout: {
+      badge: 'MEHDIPATNAM FLYOVER RED ALERT',
+      title: 'SIGNAL TIMEOUT DISPATCH!',
+      desc: 'Arre, server Mehdipatnam flyover pe atak gaya! Traffic aur flyover jam clear hone tak thoda sabar karo miyan. 10 second ruko.',
+      action: 'HAU THIK HAI, PHIR SE CONNECT KARO'
+    },
+    '404': {
+      badge: 'CHARMINAR GULLY DEAD END',
+      title: "'SEEDHA CHALE JAO' BOLA THA!",
+      desc: 'Par ye page kidhar bhi nahi dikhra miyan! Google maps bhi ro pada. Wapas main road (Home) se shuru karo.',
+      action: 'MAIN ROAD PAR WAPAS JAO'
+    },
+    spam: {
+      badge: 'ZYADA BATTHAN NAKKO KARO',
+      title: 'HORN BAND KARO MIYAN!',
+      desc: 'Zyada nakko kar bhai, ek baar button dabaaye to dum pakadta! 30 second unglee ko aaram do.',
+      action: 'MAAF KARO USTAAD (THANDA HO JAA)'
+    },
+    baigan: {
+      badge: 'BLASPHEMY DETECTED',
+      title: 'YE RATING BAIGAN HAI MIYAN!',
+      desc: 'Mutton Dum aur Double Masala chhod ke veg pulao kaiku dekhre? Dil pe pathar mat maaro.',
+      action: 'ASLI HYDERABADI DUM DIKHAO'
+    },
+    noparking: {
+      badge: 'RTC X ROADS FULL CHOKE',
+      title: 'GAADI GHUSAANE KI JAGAH NAHI!',
+      desc: 'Parking chhod ke footpath pe bhi jagah nahi hai miyan. Phone ka cache ya duplicate screenshots delete karo!',
+      action: 'RAASTA SAAF KARO'
+    }
+  };
+
+  function showGullyToast(type) {
+    const item = gullyScenarios[type];
+    if (item && gullyModal) {
+      gullyBadge.textContent = item.badge;
+      gullyTitle.textContent = item.title;
+      gullyDesc.textContent = item.desc;
+      gullyActionBtn.textContent = item.action;
+      gullyModal.classList.remove('hidden');
+      gullyModal.classList.add('flex');
+    }
+  }
+
+  function triggerBaiganToast(customText) {
+    if (gullyModal) {
+      gullyBadge.textContent = 'DOSSIER FACT CHECK';
+      gullyTitle.textContent = 'USTAAD NOTE KARO!';
+      gullyDesc.textContent = customText;
+      gullyActionBtn.textContent = 'SAMNE WALE KO BOLO';
+      gullyModal.classList.remove('hidden');
+      gullyModal.classList.add('flex');
+    }
+  }
+
+  function closeGullyToast() {
+    if (gullyModal) {
+      gullyModal.classList.add('hidden');
+      gullyModal.classList.remove('flex');
+    }
+  }
+
+  function lockTableCTA() {
+    triggerBaiganToast('Booking Table for Cafe Bahar! Auto rickshaw meter locked at ₹120. Proceed to location now!');
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)]" data-active-classes="bg-primary-container text-on-primary-container -translate-y-1 shadow-[2px_2px_0px_#000000]"><div class="flex justify-around items-center h-16 px-gutter-mobile gap-1"><a aria-current="page" class="flex-1 h-11 flex flex-col items-center justify-center gap-0.5 transition-transform bg-primary-container text-on-primary-container -translate-y-1 shadow-[2px_2px_0px_#000000]" data-path="live-battle-room" href="#"><span class="material-symbols-outlined text-[20px]">local_fire_department</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">BATTLE</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-transform" data-path="radar-map" href="#"><span class="material-symbols-outlined text-[20px]">radar</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">DEG RADAR</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-transform" data-path="spice-dossier" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">DOSSIER</span></a><a class="flex-1 h-11 flex flex-col items-center justify-center gap-0.5 text-on-surface-variant transition-transform" data-path="squad-lobby" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">SQUAD</span></a></div></nav></body></html>
